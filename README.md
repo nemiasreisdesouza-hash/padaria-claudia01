@@ -1,6 +1,6 @@
 # Pão Caseiro da Claudia — cardápio online
 
-Site estático responsivo feito em HTML, CSS e JavaScript. Para visualizar localmente, sirva a pasta do projeto com um servidor estático (por exemplo, `python3 -m http.server 8000`).
+Site estático responsivo feito em HTML, CSS e JavaScript. O `vercel.json` configura a Vercel para publicar a raiz do repositório (onde está `index.html`) e evita que a pasta `public/`, usada para imagens, seja tratada como a raiz inteira do site. Para visualizar localmente, sirva a pasta do projeto com um servidor estático (por exemplo, `python3 -m http.server 8000`).
 
 ## Personalização rápida
 
