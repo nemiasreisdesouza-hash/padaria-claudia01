@@ -25,3 +25,62 @@
   .floating-whatsapp .wa-icon svg{width:17px;height:17px}
   .button-light .wa-icon{width:27px;height:27px;flex-basis:27px}
 }
+
+/* Keep the persistent WhatsApp shortcut compact so it never covers mobile content. */
+@media(max-width:680px){
+  .floating-whatsapp{
+    left:auto;
+    right:16px;
+    bottom:calc(16px + env(safe-area-inset-bottom));
+    width:54px;
+    height:54px;
+    min-height:54px;
+    padding:0;
+    display:grid;
+    place-items:center;
+    gap:0;
+    border-radius:50%;
+    box-shadow:0 5px 18px #160b0750;
+    touch-action:manipulation;
+  }
+  .floating-whatsapp>span:not(.wa-icon){display:none}
+  .floating-whatsapp .wa-icon{width:28px;height:28px;flex-basis:28px}
+  .floating-whatsapp .wa-icon svg{width:17px;height:17px}
+  .footer{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+}
+
+/* Make the official bakery identity and its homemade loaf the stars of the hero. */
+.brand img{width:62px;height:62px}
+.site-header{height:94px}
+.hero-logo{
+  position:absolute;
+  z-index:2;
+  top:50%;
+  right:9%;
+  width:clamp(148px,17vw,198px);
+  aspect-ratio:1;
+  padding:4px;
+  border:1px solid #dfbd77;
+  border-radius:5px;
+  background:#fffaf0;
+  box-shadow:0 14px 42px #12080280,0 0 0 5px #2b150d70;
+  transform:translateY(-50%) rotate(2deg);
+}
+.hero-logo img{display:block;width:100%;height:100%;object-fit:contain;background:#fff;border-radius:2px}
+@media(max-width:900px){
+  .hero-logo{right:7%;width:142px}
+}
+@media(max-width:680px){
+  .site-header{height:76px;padding-left:18px;padding-right:18px}
+  .brand img{width:52px;height:52px}
+  .brand-name strong{font-size:17px}
+  .menu-toggle{width:44px;height:44px}
+  .nav-links{top:75px}
+  .hero-logo{top:auto;right:25px;bottom:68px;width:104px;transform:rotate(2deg)}
+  .hero-content{padding-top:clamp(72px,10svh,87px)}
+}
+@media(max-width:370px){
+  .brand img{width:48px;height:48px}
+  .brand-name strong{font-size:15px}
+  .hero-logo{width:94px;right:20px;bottom:68px}
+}
