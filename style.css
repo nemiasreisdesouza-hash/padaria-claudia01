@@ -84,3 +84,37 @@
   .brand-name strong{font-size:15px}
   .hero-logo{width:120px;right:14px;bottom:38px}
 }
+
+/* Use the official seal as a soft, oversized hero watermark rather than a small card. */
+.hero-logo{
+  top:52%;
+  right:-2%;
+  bottom:auto;
+  z-index:0;
+  width:clamp(340px,42vw,580px);
+  padding:0;
+  border:0;
+  border-radius:50%;
+  background:transparent;
+  box-shadow:none;
+  transform:translateY(-50%);
+  opacity:.64;
+  overflow:hidden;
+  -webkit-mask-image:radial-gradient(circle, #000 88%, transparent 100%);
+  mask-image:radial-gradient(circle, #000 88%, transparent 100%);
+}
+.hero-logo img{
+  border:0;
+  border-radius:50%;
+  background:transparent;
+  mix-blend-mode:multiply;
+}
+@media(max-width:900px){
+  .hero-logo{right:-3%;width:clamp(300px,44vw,410px)}
+}
+@media(max-width:680px){
+  .hero-logo{top:65%;right:-14px;bottom:auto;width:clamp(230px,66vw,290px);transform:translateY(-50%);opacity:.58}
+}
+@media(max-width:370px){
+  .hero-logo{top:66%;right:-18px;width:238px;opacity:.56}
+}
