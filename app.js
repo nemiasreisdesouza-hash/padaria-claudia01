@@ -7,11 +7,11 @@ const categoryNames = {
 };
 
 const products = [
-  { name: 'Pão tradicional', category: 'paes', description: 'Pão caseiro de massa macia, casquinha dourada e sabor de casa.', image: 'public/images/pao-tradicional.jpg', tag: 'Tradicional', icon: '✳', price: 'R$ 20,00' },
-  { name: 'Pão de batata', category: 'paes', description: 'Massa fofinha com batata, assada até ficar dourada por fora.', image: 'public/images/pao-batata.jpg', tag: 'Macio e fofinho', icon: '❋', price: 'R$ 25,00' },
+  { name: 'Pão tradicional', category: 'paes', description: 'Pão caseiro de massa macia, casquinha dourada e sabor de casa.', image: 'public/images/pao-tradicional-cliente.jpg', tag: 'Tradicional', icon: '✳', price: 'R$ 20,00' },
+  { name: 'Pão de batata', category: 'paes', description: 'Massa fofinha com batata, assada até ficar dourada por fora.', image: 'public/images/pao-batata-cliente.jpg', tag: 'Macio e fofinho', icon: '❋', price: 'R$ 25,00' },
   { name: 'Pão de farofa', category: 'paes', description: 'Pão caseiro com cobertura crocante de farofa douradinha.', image: 'public/images/pao-farofa.jpg', tag: 'Especial da casa', icon: '✦', price: 'R$ 25,00' },
   { name: 'Pão de cenoura', category: 'paes', description: 'Pão macio preparado com cenoura, de miolo dourado e delicado.', image: 'public/images/pao-cenoura.jpg', tag: 'Feito em casa', icon: '✳', price: 'R$ 25,00' },
-  { name: 'Pão recheado de calabresa', category: 'paes', description: 'Recheio caprichado de calabresa, queijo e Catupiry cremoso.', image: 'public/images/pao-calabresa-queijo-catupiry.jpg', tag: 'Bem recheado', icon: '❋', price: 'R$ 40,00' },
+  { name: 'Pão recheado de calabresa', category: 'paes', description: 'Recheio caprichado de calabresa, queijo e Catupiry cremoso.', image: 'public/images/pao-calabresa-queijo-cliente.jpg', tag: 'Bem recheado', icon: '❋', price: 'R$ 40,00' },
   { name: 'Pão recheado de presunto e queijo', category: 'paes', description: 'Presunto, queijo derretido e Catupiry em uma massa douradinha.', image: 'public/images/pao-presunto-queijo-cliente.jpg', tag: 'Bem recheado', icon: '✦', price: 'R$ 40,00' },
   { name: 'Pão de alho-poró', category: 'paes', description: 'Alho-poró com queijo e Catupiry, envoltos em pão macio e dourado.', image: 'public/images/pao-recheado-alho-poro-cliente.jpg', tag: 'Sabor especial', icon: '✳', price: 'R$ 45,00' },
   {
@@ -36,7 +36,7 @@ const products = [
     ],
   },
   {
-    name: 'Bolo caseiro de limão', category: 'bolos', description: 'Massa leve de limão, com opção de mousse feita com a fruta.', image: 'public/images/bolo-limao-cliente.jpg', tag: 'Receita cítrica', icon: '✿',
+    name: 'Bolo caseiro de limão', category: 'bolos', description: 'Massa leve de limão, com opção de mousse feita com a fruta.', image: 'public/images/bolo-limao-cliente-atualizacao.jpg', tag: 'Receita cítrica', icon: '✿',
     options: [
       { name: 'Sem cobertura', price: 'R$ 25,00', detail: 'Bolo de limão sem cobertura.' },
       { name: 'Com mousse de limão', price: 'R$ 30,00', detail: 'Cobertura de mousse da fruta.' },
