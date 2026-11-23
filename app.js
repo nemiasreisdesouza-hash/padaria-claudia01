@@ -3,6 +3,7 @@ const categoryNames = {
   paes: 'PÃES CASEIROS',
   bolos: 'BOLOS CASEIROS',
   tortas: 'TORTAS CASEIRAS',
+  salgados: 'SALGADOS DA CASA',
 };
 
 const products = [
@@ -11,8 +12,8 @@ const products = [
   { name: 'Pão de farofa', category: 'paes', description: 'Pão caseiro com cobertura crocante de farofa douradinha.', image: 'public/images/pao-farofa.jpg', tag: 'Especial da casa', icon: '✦', price: 'R$ 25,00' },
   { name: 'Pão de cenoura', category: 'paes', description: 'Pão macio preparado com cenoura, de miolo dourado e delicado.', image: 'public/images/pao-cenoura.jpg', tag: 'Feito em casa', icon: '✳', price: 'R$ 25,00' },
   { name: 'Pão recheado de calabresa', category: 'paes', description: 'Recheio caprichado de calabresa, queijo e Catupiry cremoso.', image: 'public/images/pao-calabresa-queijo-catupiry.jpg', tag: 'Bem recheado', icon: '❋', price: 'R$ 40,00' },
-  { name: 'Pão recheado de presunto e queijo', category: 'paes', description: 'Presunto, queijo derretido e Catupiry em uma massa douradinha.', image: 'public/images/pao-presunto-queijo-catupiry.jpg', tag: 'Bem recheado', icon: '✦', price: 'R$ 40,00' },
-  { name: 'Pão de alho-poró', category: 'paes', description: 'Alho-poró com queijo e Catupiry, envoltos em pão macio e dourado.', image: 'public/images/pao-alho-poro-catupiry.jpg', tag: 'Sabor especial', icon: '✳', price: 'R$ 45,00' },
+  { name: 'Pão recheado de presunto e queijo', category: 'paes', description: 'Presunto, queijo derretido e Catupiry em uma massa douradinha.', image: 'public/images/pao-presunto-queijo-cliente.jpg', tag: 'Bem recheado', icon: '✦', price: 'R$ 40,00' },
+  { name: 'Pão de alho-poró', category: 'paes', description: 'Alho-poró com queijo e Catupiry, envoltos em pão macio e dourado.', image: 'public/images/pao-recheado-alho-poro-cliente.jpg', tag: 'Sabor especial', icon: '✳', price: 'R$ 45,00' },
   {
     name: 'Bolo caseiro de cenoura', category: 'bolos', description: 'Bolo fofinho de cenoura, com opção de cobertura de chocolate 100% cacau.', image: 'public/images/bolo-cenoura-cacau.jpg', tag: 'Clássico da casa', icon: '♡',
     options: [
@@ -21,21 +22,21 @@ const products = [
     ],
   },
   {
-    name: 'Bolo caseiro de chocolate', category: 'bolos', description: 'Massa de chocolate macia, com opção de cobertura de chocolate.', image: 'public/images/bolo-chocolate.jpg', tag: 'Chocolatudo', icon: '♡',
+    name: 'Bolo caseiro de chocolate', category: 'bolos', description: 'Massa de chocolate macia, com opção de cobertura de chocolate.', image: 'public/images/bolo-chocolate-cliente.jpg', tag: 'Chocolatudo', icon: '♡',
     options: [
       { name: 'Sem cobertura', price: 'R$ 25,00', detail: 'Bolo de chocolate sem cobertura.' },
       { name: 'Com cobertura de chocolate', price: 'R$ 30,00', detail: 'Cobertura cremosa de chocolate.' },
     ],
   },
   {
-    name: 'Bolo caseiro de laranja', category: 'bolos', description: 'Bolo cítrico e macio, com opção de mousse de laranja.', image: 'public/images/bolo-laranja-mousse.jpg', tag: 'Cítrico e leve', icon: '✿',
+    name: 'Bolo caseiro de laranja', category: 'bolos', description: 'Bolo cítrico e macio, com opção de mousse de laranja.', image: 'public/images/bolo-laranja-cliente.jpg', tag: 'Cítrico e leve', icon: '✿',
     options: [
       { name: 'Sem cobertura', price: 'R$ 25,00', detail: 'Bolo de laranja sem cobertura.' },
       { name: 'Com mousse de laranja', price: 'R$ 30,00', detail: 'Cobertura de mousse de laranja.' },
     ],
   },
   {
-    name: 'Bolo caseiro de limão', category: 'bolos', description: 'Massa leve de limão, com opção de mousse feita com a fruta.', image: 'public/images/bolo-laranja-mousse.jpg', tag: 'Receita cítrica', icon: '✿',
+    name: 'Bolo caseiro de limão', category: 'bolos', description: 'Massa leve de limão, com opção de mousse feita com a fruta.', image: 'public/images/bolo-limao-cliente.jpg', tag: 'Receita cítrica', icon: '✿',
     options: [
       { name: 'Sem cobertura', price: 'R$ 25,00', detail: 'Bolo de limão sem cobertura.' },
       { name: 'Com mousse de limão', price: 'R$ 30,00', detail: 'Cobertura de mousse da fruta.' },
@@ -55,7 +56,16 @@ const products = [
       { name: 'Com cobertura de chocolate', price: 'R$ 30,00', detail: 'Cobertura de chocolate sobre o bolo formigueiro.' },
     ],
   },
-  { name: 'Torta de pão de forma com frango', category: 'tortas', description: 'Torta caseira de pão de forma com recheio de frango e geleia de morango.', image: 'public/images/pao-presunto-queijo-catupiry.jpg', tag: 'Receita especial', icon: '✿', price: 'R$ 55,00' },
+  { name: 'Torta de pão de forma com frango', category: 'tortas', description: 'Torta caseira de pão de forma com recheio de frango, coberta com batata palha.', image: 'public/images/torta-pao-forma-cliente.jpg', tag: 'Receita especial', icon: '✿', price: 'R$ 55,00' },
+  {
+    name: 'Cento de salgados de festa', category: 'salgados', description: 'Coxinha de frango, pastel de queijo e presunto, bolinha de queijo, croquete de milho, kibe, enroladinho de salsicha e coxinha de calabresa com queijo.', image: 'public/images/cento-salgadinhos-cliente.jpg', tag: 'Para compartilhar', icon: '✦', optionsLabel: 'Escolha o preparo', priceSummary: 'R$ 60,00 a R$ 70,00',
+    options: [
+      { name: 'Cento frito', price: 'R$ 70,00', detail: 'Cento de salgados entregue frito.' },
+      { name: 'Cento sem fritar', price: 'R$ 60,00', detail: 'Cento de salgados entregue sem fritar.' },
+    ],
+  },
+  { name: 'Empadinha de frango', category: 'salgados', description: 'Empadinha de frango, com massa delicada e douradinha.', image: 'public/images/salgados.jpg', tag: 'Feita em casa', icon: '♡', price: 'R$ 4,99' },
+  { name: 'Quiche média', category: 'salgados', description: 'Quiche média caseira, assada até ficar douradinha.', image: 'public/images/quiche-media-cliente.jpg', tag: 'Receita especial', icon: '✿', price: 'R$ 30,00' },
 ];
 
 const grid = document.querySelector('#product-grid');
@@ -77,7 +87,7 @@ function renderProducts(category = 'todos') {
         <p class="option-detail" id="product-option-detail-${productIndex}" aria-live="polite">Escolha uma versão para ver o valor.</p>
       </div>` : '';
     const priceMarkup = hasOptions
-      ? '<div class="product-price"><strong>A partir de R$ 25,00</strong><span>sem cobertura</span></div>'
+      ? `<div class="product-price"><strong>${product.priceSummary || 'A partir de R$ 25,00'}</strong>${product.priceSummary ? '' : '<span>sem cobertura</span>'}</div>`
       : `<div class="product-price"><strong>${product.price}</strong></div>`;
     const orderMarkup = hasOptions
       ? '<a class="product-order product-order-disabled" href="#" aria-disabled="true" tabindex="-1">Escolha uma versão <span>↗</span></a>'
