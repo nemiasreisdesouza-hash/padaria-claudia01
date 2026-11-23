@@ -65,3 +65,40 @@
   .brand img{width:48px;height:48px}
   .brand-name strong{font-size:15px}
 }
+
+/* Cardápio atualizado: preço claro e escolha de cobertura para bolos. */
+.product-price{display:flex;align-items:baseline;gap:8px;margin:9px 0 10px}
+.product-price strong{color:#7a3d19;font:600 20px var(--serif)}
+.product-price span{color:#85766a;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.product-card--options .product-info>p{height:auto;min-height:39px}
+.product-customization{display:grid;gap:6px;margin:9px 0 0}
+.product-customization label{color:#68401f;font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.product-option{width:100%;min-height:42px;padding:0 30px 0 10px;border:1px solid #d8c6a6;border-radius:2px;background:#fffdf8;color:#3b2718;font:500 11px var(--sans)}
+.product-option:focus-visible{outline:2px solid #b78337;outline-offset:2px}
+.product-card--options .option-detail{height:auto;min-height:27px;margin:0;color:#807063;font-size:9px;line-height:1.45}
+.product-order-disabled{opacity:.5;cursor:not-allowed}
+@media(max-width:680px){
+  .product-grid{grid-template-columns:1fr;gap:12px}
+  .product-card{display:grid;grid-template-columns:minmax(112px,37%) minmax(0,1fr);align-items:stretch;overflow:hidden}
+  .product-image{height:100%;min-height:174px}
+  .product-image img{position:absolute;inset:0}
+  .product-info{align-self:center;padding:14px 12px}
+  .product-category{font-size:7px}
+  .product-info h3{font-size:17px;line-height:1.17}
+  .product-info>p{height:auto;min-height:0;font-size:11px;line-height:1.5}
+  .product-card--options .product-info>p{min-height:0}
+  .product-price{margin:7px 0 6px}
+  .product-price strong{font-size:18px}
+  .product-customization{gap:5px;margin-top:7px}
+  .product-option{min-height:44px;font-size:10px;padding-left:8px}
+  .product-card--options .option-detail{min-height:0;font-size:9px}
+  .product-order{min-height:38px;margin-top:8px;padding-top:8px;font-size:9px}
+}
+@media(max-width:370px){
+  .product-card{grid-template-columns:minmax(100px,35%) minmax(0,1fr)}
+  .product-info{padding:12px 9px}
+  .product-info h3{font-size:15px}
+  .product-info>p{font-size:10px}
+  .product-price strong{font-size:17px}
+  .product-option{font-size:9px}
+}
