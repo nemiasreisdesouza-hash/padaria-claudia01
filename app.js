@@ -69,6 +69,9 @@ const products = [
 ];
 
 const grid = document.querySelector('#product-grid');
+const imageLightbox = document.querySelector('#product-image-lightbox');
+const imageLightboxImage = document.querySelector('#image-lightbox-image');
+const imageLightboxCaption = document.querySelector('#image-lightbox-caption');
 function whatsappLink(message) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
@@ -94,10 +97,17 @@ function renderProducts(category = 'todos') {
       : `<a class="product-order" href="${whatsappLink(`Olá, Claudia! Gostaria de encomendar ${product.name} por ${product.price}.`)}" target="_blank" rel="noopener">Encomendar <span>↗</span></a>`;
     return `
       <article class="product-card${hasOptions ? ' product-card--options' : ''}" style="--card-index:${index}">
-        <div class="product-image"><img src="${product.image}" alt="${product.name}" loading="lazy"><span class="product-tag">${product.tag}</span><span class="product-number">${String(productIndex + 1).padStart(2, '0')}</span></div>
+        <button class="product-image" type="button" aria-label="Ampliar foto de ${product.name}" title="Abrir foto ampliada" data-image-src="${product.image}" data-image-alt="${product.name}"><img src="${product.image}" alt="" loading="lazy"><span class="product-tag">${product.tag}</span><span class="image-zoom-hint" aria-hidden="true">Ampliar foto ↗</span><span class="product-number">${String(productIndex + 1).padStart(2, '0')}</span></button>
         <div class="product-info"><div class="product-category">${categoryNames[product.category]}</div><h3>${product.name} <span>${product.icon}</span></h3><p>${product.description}</p>${priceMarkup}${optionsMarkup}${orderMarkup}</div>
       </article>`;
   }).join('');
+
+  grid.querySelectorAll('.product-image').forEach(button => button.addEventListener('click', () => {
+    imageLightboxImage.src = button.dataset.imageSrc;
+    imageLightboxImage.alt = button.dataset.imageAlt;
+    imageLightboxCaption.textContent = button.dataset.imageAlt;
+    imageLightbox.showModal();
+  }));
 
   grid.querySelectorAll('.product-option').forEach(select => {
     const product = products[Number(select.dataset.productIndex)];
@@ -129,6 +139,10 @@ function renderProducts(category = 'todos') {
 }
 
 renderProducts();
+document.querySelector('.image-lightbox-close').addEventListener('click', () => imageLightbox.close());
+imageLightbox.addEventListener('click', event => {
+  if (event.target === imageLightbox) imageLightbox.close();
+});
 document.querySelectorAll('.category-tab').forEach(tab => tab.addEventListener('click', () => {
   document.querySelectorAll('.category-tab').forEach(item => { item.classList.remove('active'); item.setAttribute('aria-selected', 'false'); });
   tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); renderProducts(tab.dataset.category);
